@@ -1,0 +1,1 @@
+node-sass --include-path scss ui-library/scss/main.scss ui-library/public/css/style.css

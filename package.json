@@ -1,0 +1,27 @@
+{
+  "name": "fractal-test",
+  "version": "1.0.0",
+  "description": "Next Plc UI Library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joniefun/fractal-test.git"
+  },
+  "keywords": [
+    "css",
+    "pattern",
+    "styleguide"
+  ],
+  "author": "Jon Hickinbotham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joniefun/fractal-test/issues"
+  },
+  "homepage": "https://github.com/joniefun/fractal-test#readme",
+  "dependencies": {
+    "@frctl/fractal": "^1.1.3"
+  }
+}

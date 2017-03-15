@@ -39,6 +39,10 @@ $brand-font-light: 'azo-sans-web-light';
 $brand-font-reg: 'azo-sans-web-reg';
 $brand-font-med: 'azo-sans-web-med';
 
+h1, h2, h3 {
+    font-weight: normal;
+}
+
 h1 {
     font-family: $brand-font-reg;
     font-size: 1.25rem;
@@ -59,16 +63,36 @@ h3 {
     font-size: 0.6875rem;
     letter-spacing: 1.8px;
     text-transform: uppercase;
+    
+    &.h3--product-listing {
+        font-family: $brand-font-reg;
+        font-size: 0.875rem;
+        letter-spacing: 2.3px;
+    }
+    
 }
 
 /* BODY COPY STYLES */
 
-$body-font: 'helvetica-neue-light';
+$body-font: 'helvetica';
 
 p {
     font-family: $body-font;
+    font-weight: 300;
     font-size: 0.875rem;
     letter-spacing: 0.4px;
+    
+    &.p--small {
+        font-size: 0.6875rem;
+        letter-spacing: 0.3px;
+    }
+    
+}
+
+/* LINK STYLES */
+
+p a {
+    color: $primary-color;
 }
 
 

@@ -25,6 +25,9 @@ body {
   src: url("../fonts/AzoSans-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/AzoSans-Medium-webfont.woff") format("woff"), url("../fonts/AzoSans-Medium-webfont.ttf") format("truetype"), url("../fonts/AzoSans-Medium-webfont.svg#azo_sansthin") format("svg"); }
 
 /* TITLE STYLES */
+h1, h2, h3 {
+  font-weight: normal; }
+
 h1 {
   font-family: "azo-sans-web-reg";
   font-size: 1.25rem;
@@ -43,12 +46,24 @@ h3 {
   font-size: 0.6875rem;
   letter-spacing: 1.8px;
   text-transform: uppercase; }
+  h3.h3--product-listing {
+    font-family: "azo-sans-web-reg";
+    font-size: 0.875rem;
+    letter-spacing: 2.3px; }
 
 /* BODY COPY STYLES */
 p {
-  font-family: "helvetica-neue-light";
+  font-family: "helvetica";
+  font-weight: 300;
   font-size: 0.875rem;
   letter-spacing: 0.4px; }
+  p.p--small {
+    font-size: 0.6875rem;
+    letter-spacing: 0.3px; }
+
+/* LINK STYLES */
+p a {
+  color: #1a6461; }
 
 /* MODULES */
 /* BUTTONS */
@@ -68,4 +83,32 @@ p {
   .btn--secondary {
     background-color: #fff;
     color: #222;
+    border: 1px solid #222; }
+
+/* FORM LABELS */
+label {
+  font-family: "azo-sans-web-light";
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 2.3px;
+  margin-bottom: 0.5rem;
+  display: block; }
+  label span {
+    font-family: "azo-sans-web-reg"; }
+
+input {
+  font-family: "helvetica";
+  font-weight: 300;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  padding: 15px 12px;
+  display: block;
+  -webkit-appearance: none;
+  border: 1px solid #e6e6e6;
+  min-width: 288px;
+  margin: 0;
+  transition: ease-in-out all .3s;
+  margin-bottom: 1rem; }
+  input:focus {
+    outline: none;
     border: 1px solid #222; }

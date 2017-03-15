@@ -1,9 +1,10 @@
 /* BASE STYLES */
 
+@import 'base/colors';
 @import 'base/base';
 @import 'base/fonts';
-@import 'base/colors';
 
 /* MODULES */
 
 @import 'modules/buttons';
+@import 'modules/form-elements';

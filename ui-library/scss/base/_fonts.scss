@@ -33,7 +33,7 @@
          url('../fonts/AzoSans-Medium-webfont.svg#azo_sansthin') format('svg');
 }
 
-/* FONT STYLES */
+/* TITLE STYLES */
 
 $brand-font-light: 'azo-sans-web-light';
 $brand-font-reg: 'azo-sans-web-reg';
@@ -61,7 +61,15 @@ h3 {
     text-transform: uppercase;
 }
 
+/* BODY COPY STYLES */
 
+$body-font: 'helvetica-neue-light';
+
+p {
+    font-family: $body-font;
+    font-size: 0.875rem;
+    letter-spacing: 0.4px;
+}
 
 
 

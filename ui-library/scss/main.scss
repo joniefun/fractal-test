@@ -1,73 +1,9 @@
-$primary-color: #1d7468;
-$primary-btn-color: #fff;
-$secondary-color: #222;
-$secondary-btn-color: #222;
-$white: #fff;
+/* BASE STYLES */
 
-$brand-font-reg: azo-sans-web-light;
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/colors';
 
+/* MODULES */
 
-@font-face {
-    font-family: 'azo-sans-web-thin';
-    src: url('../fonts/AzoSans-Thin-webfont.eot');
-    src: url('../fonts/AzoSans-Thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/AzoSans-Thin-webfont.woff') format('woff'),
-         url('../fonts/AzoSans-Thin-webfont.ttf') format('truetype'),
-         url('../fonts/AzoSans-Thin-webfont.svg#azo_sansthin') format('svg');
-}
-@font-face {
-    font-family: 'azo-sans-web-light';
-    src: url('../fonts/AzoSans-Light-webfont.eot');
-    src: url('../fonts/AzoSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/AzoSans-Light-webfont.woff') format('woff'),
-         url('../fonts/AzoSans-Light-webfont.ttf') format('truetype'),
-         url('../fonts/AzoSans-Light-webfont.svg#azo_sansthin') format('svg');
-}
-@font-face {
-    font-family: 'azo-sans-web-reg';
-    src: url('../fonts/AzoSans-Regular-webfont.eot');
-    src: url('../fonts/AzoSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/AzoSans-Regular-webfont.woff') format('woff'),
-         url('../fonts/AzoSans-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/AzoSans-Regular-webfont.svg#azo_sansthin') format('svg');
-}
-@font-face {
-    font-family: 'azo-sans-web-med';
-    src: url('../fonts/AzoSans-Medium-webfont.eot');
-    src: url('../fonts/AzoSans-Medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/AzoSans-Medium-webfont.woff') format('woff'),
-         url('../fonts/AzoSans-Medium-webfont.ttf') format('truetype'),
-         url('../fonts/AzoSans-Medium-webfont.svg#azo_sansthin') format('svg');
-}
-
-
-body {
-    font-size: 16px;
-}
-
-.btn {
-    padding: 16px 20px;
-    background-color: $primary-color;
-    border-radius: 4px;
-    float: left;
-    color: $primary-btn-color;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    font-family: $brand-font-reg;
-    font-size: 0.875rem;
-    letter-spacing: 1.8px;
-    min-width: 240px;
-    
-    &--primary {
-        @extend .btn;
-    }
-    
-    &--secondary {
-        @extend .btn;
-        background-color: $white;
-        color: $secondary-btn-color;
-        border: 1px solid $secondary-color;
-    }
-    
-}
+@import 'modules/buttons';

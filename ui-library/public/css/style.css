@@ -1,3 +1,9 @@
+/* BASE STYLES */
+/* BASE STYLES */
+body {
+  font-size: 16px; }
+
+/* FONT IMPORT */
 @font-face {
   font-family: 'azo-sans-web-thin';
   src: url("../fonts/AzoSans-Thin-webfont.eot");
@@ -18,22 +24,41 @@
   src: url("../fonts/AzoSans-Medium-webfont.eot");
   src: url("../fonts/AzoSans-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/AzoSans-Medium-webfont.woff") format("woff"), url("../fonts/AzoSans-Medium-webfont.ttf") format("truetype"), url("../fonts/AzoSans-Medium-webfont.svg#azo_sansthin") format("svg"); }
 
-body {
-  font-size: 16px; }
+/* FONT STYLES */
+h1 {
+  font-family: "azo-sans-web-reg";
+  font-size: 1.25rem;
+  letter-spacing: 2.3px;
+  line-height: 21px;
+  text-transform: uppercase; }
 
+h2 {
+  font-family: "azo-sans-web-light";
+  font-size: 0.875rem;
+  letter-spacing: 2.3px;
+  text-transform: uppercase; }
+
+h3 {
+  font-family: "azo-sans-web-light";
+  font-size: 0.6875rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase; }
+
+/* MODULES */
+/* BUTTONS */
 .btn, .btn--primary, .btn--secondary {
   padding: 16px 20px;
-  background-color: #1d7468;
+  background-color: #1a6461;
   border-radius: 4px;
   float: left;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  font-family: azo-sans-web-light;
+  font-family: "azo-sans-web-reg";
   font-size: 0.875rem;
-  letter-spacing: 1.8px;
-  min-width: 240px; }
+  letter-spacing: 1.2px;
+  min-width: 288px; }
   .btn--secondary {
     background-color: #fff;
     color: #222;

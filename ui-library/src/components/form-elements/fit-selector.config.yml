@@ -1,0 +1,6 @@
+title: Fit selector
+context:
+    fit-select-label: Fit
+    petite-label: Petite
+    regular-label: Regular
+    tall-label: Tall

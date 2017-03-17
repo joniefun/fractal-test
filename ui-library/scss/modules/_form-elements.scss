@@ -14,10 +14,14 @@ label {
     
 }
 
+/* TEXT INPUTS + VALIDATION */
+
 input {
-    font-family: $body-font;
+    font-family: $brand-font-reg;
     font-weight: 300;
     font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
     border-radius: 4px;
     padding: 15px 12px;
     display: block;
@@ -25,8 +29,202 @@ input {
     border: 1px solid $border;
     min-width: 288px;
     margin: 0;
-    transition: ease-in-out all .3s;
+    transition: border ease-in-out .3s;
     margin-bottom: 1rem;
+    
+    &:focus {
+        outline: none;
+        border: 1px solid $secondary-color;
+    }
+    
+}
+
+.parsley-success {
+    background-image: url('../assets/icons/success-tick.svg');
+    background-position: right 16px center;
+    background-repeat: no-repeat;
+}
+
+.parsley-error {
+    background-image: url('../assets/icons/error-cross.svg');
+    background-position: right 16px center;
+    background-repeat: no-repeat;
+}
+
+.parsley-required {
+    font-family: $body-font;
+    font-size: 0.6875rem;
+    margin-top: -8px;
+    color: $error;
+}
+
+.parsley-type {
+    @extend .parsley-required;
+}
+
+/* CHIP STYLE - for use in chip selectors */
+
+.chip-style {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid $border;
+    margin-right: 0.375rem;
+    margin-bottom: 0.375rem;
+    transition: ease-in-out all .3s;
+    font-family: $brand-font-light;
+    font-size: 0.875rem;
+    
+    &:hover {
+        cursor: pointer;
+    }
+    
+}
+
+/* COLOR SELECTOR */
+
+.clr-select {
+    
+    list-style-type: none;
+    margin: 0;
+    
+        &__clr-chip {
+            
+            @extend .chip-style;
+            
+            &--active {
+                border: 2px solid $primary-color;
+                box-shadow: inset 0px 0px 0px 2px #fff;
+            }
+            
+            &--black {
+                @extend .clr-select__clr-chip;
+                background-color: $black;   
+            }
+            
+            &--grey {
+                @extend .clr-select__clr-chip;
+                background-color: $grey;
+            }
+            
+            &--blue {
+                @extend .clr-select__clr-chip;
+                background-color: $blue;
+            }
+            
+            &--red {
+                @extend .clr-select__clr-chip;
+                background-color: $red;
+            }
+            
+            &--green {
+                @extend .clr-select__clr-chip;
+                background-color: $green;
+            }
+            
+            &--yellow {
+                @extend .clr-select__clr-chip;
+                background-color: $yellow;
+            }
+            
+            &--purple {
+                @extend .clr-select__clr-chip;
+                background-color: $purple;
+            }
+            
+            &--pink {
+                @extend .clr-select__clr-chip;
+                background-color: $pink;
+            }
+            
+        }
+}
+
+/* SIZE SELECTOR */
+
+.size-select {
+    
+    list-style-type: none;
+    margin: 0;
+    
+        &__size-chip {
+            
+            @extend .chip-style;
+            position: relative;
+            
+            &--active {
+                border: 2px solid $primary-color;
+                background: rgba( $primary-color, .05 );
+                font-family: $brand-font-reg;
+            }
+            
+            span {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+        }
+}
+
+/* FIT SELECTOR */
+
+.fit-select {
+    
+    list-style-type: none;
+    margin: 0;
+    
+        &__fit-chip {
+            
+            @extend .chip-style;
+            position: relative;
+            width: 120px;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            
+            &--active {
+                border: 2px solid $primary-color;
+                background: rgba( $primary-color, .05 );
+                font-family: $brand-font-reg;
+            }
+            
+            span {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+        }
+}
+
+/* DROPDOWNS */
+
+select {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(...);
+    padding: 15px 12px;
+    min-width: 288px;
+    border: 1px solid $border;
+    border-radius: 4px;
+    font-family: $brand-font-reg;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    background: url("../assets/icons/chevron-dark.svg") no-repeat;
+    background-position: right 16px center;
     
     &:focus {
         outline: none;

@@ -12,7 +12,7 @@
     font-family: $brand-font-reg;
     font-size: 0.875rem;
     letter-spacing: 1.2px;
-    min-width: 288px;
+    width: 100%;
     
     &--primary {
         @extend .btn;

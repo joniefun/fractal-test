@@ -8,6 +8,9 @@
 body {
   font-size: 16px; }
 
+.section--padding {
+  padding: 1rem; }
+
 /* FONT IMPORT */
 @font-face {
   font-family: 'azo-sans-web-thin';
@@ -89,7 +92,7 @@ p a {
   font-family: "azo-sans-web-reg";
   font-size: 0.875rem;
   letter-spacing: 1.2px;
-  min-width: 288px; }
+  width: 100%; }
   .btn--secondary {
     background-color: #fff;
     color: #222;
@@ -124,7 +127,7 @@ input {
     display: block;
     -webkit-appearance: none;
     border: 1px solid #e6e6e6;
-    min-width: 288px;
+    width: 100%;
     margin: 0;
     transition: border ease-in-out .3s;
     margin-bottom: 1rem; }
@@ -246,7 +249,8 @@ input {
   margin-top: -8px;
   color: #ff0035;
   font-weight: 300;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  list-style: none; }
 
 /* CHIP STYLE - for use in chip selectors */
 .chip-style, .clr-select__clr-chip, .clr-select__clr-chip--black, .clr-select__clr-chip--grey, .clr-select__clr-chip--blue, .clr-select__clr-chip--red, .clr-select__clr-chip--green, .clr-select__clr-chip--yellow, .clr-select__clr-chip--purple, .clr-select__clr-chip--pink, .size-select__size-chip, .fit-select__fit-chip {
@@ -339,7 +343,7 @@ select {
   appearance: none;
   background-image: url(...);
   padding: 15px 12px;
-  min-width: 288px;
+  width: 100%;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   font-family: "azo-sans-web-reg";
@@ -352,3 +356,14 @@ select {
   select:focus {
     outline: none;
     border: 1px solid #424242; }
+
+.swiper-container__product-page--main .swiper-slide img {
+  max-width: 100%; }
+
+.swiper-container__product-page--main .swiper-pagination-bullet {
+  background: #424242;
+  opacity: 1;
+  border: 1px solid #fff; }
+  .swiper-container__product-page--main .swiper-pagination-bullet-active {
+    background: #0fbb67;
+    opacity: 1; }

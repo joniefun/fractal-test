@@ -38,13 +38,15 @@ h1 {
   font-size: 1.25rem;
   letter-spacing: 2.3px;
   line-height: 21px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 1.25rem; }
 
 h2 {
   font-family: "azo-sans-web-light";
   font-size: 0.875rem;
   letter-spacing: 2.3px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 1rem; }
 
 h3 {
   font-family: "azo-sans-web-light";
@@ -61,7 +63,8 @@ p {
   font-family: "helvetica";
   font-weight: 300;
   font-size: 0.875rem;
-  letter-spacing: 0.4px; }
+  letter-spacing: 0.4px;
+  margin-bottom: 1rem; }
   p.p--small {
     font-size: 0.6875rem;
     letter-spacing: 0.3px; }
@@ -92,6 +95,10 @@ p a {
     color: #222;
     border: 1px solid #424242; }
 
+/* INPUT COLLECTION SPACING */
+.input-collection-space {
+  margin-bottom: 1rem; }
+
 /* FORM LABELS */
 label {
   font-family: "azo-sans-web-light";
@@ -103,41 +110,143 @@ label {
   label span {
     font-family: "azo-sans-web-reg"; }
 
-/* TEXT INPUTS + VALIDATION */
+/* TEXT INPUT */
 input {
-  font-family: "azo-sans-web-reg";
-  font-weight: 300;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 1.8px;
-  border-radius: 4px;
-  padding: 15px 12px;
-  display: block;
-  -webkit-appearance: none;
-  border: 1px solid #e6e6e6;
-  min-width: 288px;
-  margin: 0;
-  transition: border ease-in-out .3s;
-  margin-bottom: 1rem; }
-  input:focus {
-    outline: none;
-    border: 1px solid #424242; }
+  /* RADIO INPUT */
+  /* CHECKBOX INPUT */ }
+  input[type=text] {
+    font-family: "azo-sans-web-reg";
+    font-weight: 300;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    padding: 15px 12px;
+    display: block;
+    -webkit-appearance: none;
+    border: 1px solid #e6e6e6;
+    min-width: 288px;
+    margin: 0;
+    transition: border ease-in-out .3s;
+    margin-bottom: 1rem; }
+    input[type=text]:focus {
+      outline: none;
+      border: 1px solid #424242; }
+  input[type=radio] {
+    margin-right: 0.5rem;
+    position: absolute;
+    visibility: hidden; }
+    input[type=radio]:checked ~ span {
+      border: 2px solid #1a6461; }
+      input[type=radio]:checked ~ span::before {
+        transform: scale(1);
+        transition: all 0.3s ease-in-out; }
+    input[type=radio]:checked ~ label {
+      font-family: "azo-sans-web-reg";
+      transition: all 0.3s ease-in-out; }
+    input[type=radio]:focus {
+      outline: none; }
+  input[type=checkbox] {
+    position: absolute;
+    visibility: hidden; }
+    input[type=checkbox]:checked ~ span {
+      border: 2px solid #1a6461; }
+      input[type=checkbox]:checked ~ span::before {
+        opacity: 1;
+        -webkit-transform: scale(1) rotate(-45deg);
+        transform: scale(1) rotate(-45deg);
+        transition: all 0.3s ease-in-out; }
 
+/* RADIO LABEL */
+.label {
+  /* CHECKBOX LABEL */ }
+  .label--radio {
+    display: block;
+    position: relative;
+    line-height: 24px;
+    padding: 0 0 0 32px;
+    text-transform: capitalize;
+    letter-spacing: 1px; }
+    .label--radio:hover {
+      cursor: pointer; }
+    .label--radioactive {
+      font-family: "azo-sans-web-reg"; }
+    .label--radio span {
+      display: block;
+      position: absolute;
+      border: 1px solid #e6e6e6;
+      border-radius: 100%;
+      height: 24px;
+      width: 24px;
+      left: 0px; }
+      .label--radio span::before {
+        display: block;
+        position: absolute;
+        content: '';
+        border-radius: 100%;
+        height: 6px;
+        width: 6px;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #424242;
+        transform: scale(0); }
+  .label--checkbox {
+    display: block;
+    position: relative;
+    line-height: 24px;
+    padding: 0 0 0 32px;
+    text-transform: capitalize;
+    letter-spacing: 1px; }
+    .label--checkbox:hover {
+      cursor: pointer; }
+    .label--checkboxactive {
+      font-family: "azo-sans-web-reg"; }
+    .label--checkbox span {
+      display: block;
+      position: absolute;
+      border: 1px solid #e6e6e6;
+      border-radius: 4px;
+      height: 24px;
+      width: 24px;
+      left: 0px;
+      top: 0px; }
+      .label--checkbox span::before {
+        content: '';
+        width: 10px;
+        height: 5px;
+        position: absolute;
+        top: 5px;
+        left: 4px;
+        border: 2px solid #424242;
+        border-top: none;
+        border-right: none;
+        background: transparent;
+        opacity: 0;
+        -webkit-transform: scale(0) rotate(-45deg);
+        transform: scale(0) rotate(-45deg); }
+
+/* VALIDATION */
 .parsley-success {
   background-image: url("../assets/icons/success-tick.svg");
   background-position: right 16px center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  font-weight: 300; }
 
 .parsley-error {
   background-image: url("../assets/icons/error-cross.svg");
   background-position: right 16px center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  font-weight: 300; }
 
 .parsley-required, .parsley-type {
   font-family: "helvetica";
   font-size: 0.6875rem;
   margin-top: -8px;
-  color: #ff0058; }
+  color: #ff0035;
+  font-weight: 300;
+  margin-bottom: 1rem; }
 
 /* CHIP STYLE - for use in chip selectors */
 .chip-style, .clr-select__clr-chip, .clr-select__clr-chip--black, .clr-select__clr-chip--grey, .clr-select__clr-chip--blue, .clr-select__clr-chip--red, .clr-select__clr-chip--green, .clr-select__clr-chip--yellow, .clr-select__clr-chip--purple, .clr-select__clr-chip--pink, .size-select__size-chip, .fit-select__fit-chip {
@@ -157,7 +266,8 @@ input {
 /* COLOR SELECTOR */
 .clr-select {
   list-style-type: none;
-  margin: 0; }
+  margin: 0;
+  margin-bottom: 1rem; }
   .clr-select__clr-chip--active {
     border: 2px solid #1a6461;
     box-shadow: inset 0px 0px 0px 2px #fff; }
@@ -181,7 +291,8 @@ input {
 /* SIZE SELECTOR */
 .size-select {
   list-style-type: none;
-  margin: 0; }
+  margin: 0;
+  margin-bottom: 1rem; }
   .size-select__size-chip {
     position: relative; }
     .size-select__size-chip--active {
@@ -201,12 +312,12 @@ input {
 /* FIT SELECTOR */
 .fit-select {
   list-style-type: none;
-  margin: 0; }
+  margin: 0;
+  margin-bottom: 1rem; }
   .fit-select__fit-chip {
     position: relative;
     width: 120px;
-    text-transform: uppercase;
-    letter-spacing: 1.8px; }
+    letter-spacing: 1px; }
     .fit-select__fit-chip--active {
       border: 2px solid #1a6461;
       background: rgba(26, 100, 97, 0.05);
@@ -233,10 +344,11 @@ select {
   border-radius: 4px;
   font-family: "azo-sans-web-reg";
   font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 1.8px;
+  letter-spacing: 1px;
   background: url("../assets/icons/chevron-dark.svg") no-repeat;
-  background-position: right 16px center; }
+  background-position: right 16px center;
+  transition: border ease-in-out .3s;
+  margin-bottom: 1rem; }
   select:focus {
     outline: none;
     border: 1px solid #424242; }

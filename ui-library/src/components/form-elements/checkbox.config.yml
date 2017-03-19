@@ -1,0 +1,5 @@
+title: Checkbox
+context:
+    checkbox-one-label: Option One
+    checkbox-two-label: Option Two
+    checkbox-three-label: Option Three

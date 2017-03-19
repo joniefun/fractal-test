@@ -49,6 +49,7 @@ h1 {
     letter-spacing: 2.3px;
     line-height: 21px;
     text-transform: uppercase;
+    margin-bottom: 1.25rem;
 }
 
 h2 {
@@ -56,6 +57,7 @@ h2 {
     font-size: 0.875rem;
     letter-spacing: 2.3px;
     text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 h3 {
@@ -81,6 +83,7 @@ p {
     font-weight: 300;
     font-size: 0.875rem;
     letter-spacing: 0.4px;
+    margin-bottom: 1rem;
     
     &.p--small {
         font-size: 0.6875rem;

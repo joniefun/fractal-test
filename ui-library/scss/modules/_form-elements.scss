@@ -1,3 +1,9 @@
+/* INPUT COLLECTION SPACING */
+
+.input-collection-space {
+    margin-bottom: 1rem;
+}
+
 /* FORM LABELS */
 
 label {
@@ -14,41 +20,194 @@ label {
     
 }
 
-/* TEXT INPUTS + VALIDATION */
+/* TEXT INPUT */
 
 input {
-    font-family: $brand-font-reg;
-    font-weight: 300;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    border-radius: 4px;
-    padding: 15px 12px;
-    display: block;
-    -webkit-appearance: none;
-    border: 1px solid $border;
-    min-width: 288px;
-    margin: 0;
-    transition: border ease-in-out .3s;
-    margin-bottom: 1rem;
+
+    &[type=text] {
+        font-family: $brand-font-reg;
+        font-weight: 300;
+        font-size: 0.875rem;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        padding: 15px 12px;
+        display: block;
+        -webkit-appearance: none;
+        border: 1px solid $border;
+        min-width: 288px;
+        margin: 0;
+        transition: border ease-in-out .3s;
+        margin-bottom: 1rem;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $secondary-color;
+        }
+
+    }
     
-    &:focus {
-        outline: none;
-        border: 1px solid $secondary-color;
+/* RADIO INPUT */
+    
+    &[type=radio] {
+        margin-right: 0.5rem;
+        position: absolute;
+        visibility: hidden;
+        
+        &:checked ~ span {
+            border: 2px solid $primary-color;
+            
+            &::before {
+                transform: scale(1);
+                transition: all 0.3s ease-in-out;
+            }
+            
+        }
+        
+        &:checked ~ label {
+            font-family: $brand-font-reg;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        &:focus {
+            outline: none;
+        }
+        
+    }
+    
+/* CHECKBOX INPUT */
+    
+    &[type=checkbox] {
+        position: absolute;
+        visibility: hidden;
+        
+        &:checked ~ span {
+            border: 2px solid $primary-color;
+            
+            &::before {
+                opacity: 1;
+                -webkit-transform: scale(1) rotate(-45deg);
+                transform: scale(1) rotate(-45deg);
+                transition: all 0.3s ease-in-out;
+            }
+            
+        }
+        
     }
     
 }
+
+/* RADIO LABEL */
+
+.label{
+    &--radio {
+        display: block;
+        position: relative;
+        line-height: 24px;
+        padding: 0 0 0 32px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &active {
+            font-family: $brand-font-reg;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            border: 1px solid $border;
+            border-radius: 100%;
+            height: 24px;
+            width: 24px;
+            left: 0px;
+
+            &::before {
+                display: block;
+                position: absolute;
+                content: '';
+                border-radius: 100%;
+                height: 6px;
+                width: 6px;
+                margin: auto;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: $secondary-color;
+                transform: scale(0);
+            }
+
+        }
+
+    }
+    
+/* CHECKBOX LABEL */
+    
+    &--checkbox {
+        display: block;
+        position: relative;
+        line-height: 24px;
+        padding: 0 0 0 32px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        
+        &:hover {
+            cursor: pointer;
+        }
+
+        &active {
+            font-family: $brand-font-reg;
+        }
+        
+        span {
+            display: block;
+            position: absolute;
+            border: 1px solid $border;
+            border-radius: 4px;
+            height: 24px;
+            width: 24px;
+            left: 0px;
+            top: 0px;
+            
+            &::before {
+                content: '';
+                width: 10px;
+                height: 5px;
+                position: absolute;
+                top: 5px;
+                left: 4px;
+                border: 2px solid $secondary-color;
+                border-top: none;
+                border-right: none;
+                background: transparent;
+                opacity: 0;
+                -webkit-transform: scale(0) rotate(-45deg);
+                transform: scale(0) rotate(-45deg);
+            }
+            
+        }
+        
+    }
+    
+}
+
+/* VALIDATION */
 
 .parsley-success {
     background-image: url('../assets/icons/success-tick.svg');
     background-position: right 16px center;
     background-repeat: no-repeat;
+    font-weight: 300;
 }
 
 .parsley-error {
     background-image: url('../assets/icons/error-cross.svg');
     background-position: right 16px center;
     background-repeat: no-repeat;
+    font-weight: 300;
 }
 
 .parsley-required {
@@ -56,6 +215,8 @@ input {
     font-size: 0.6875rem;
     margin-top: -8px;
     color: $error;
+    font-weight: 300;
+    margin-bottom: 1rem;
 }
 
 .parsley-type {
@@ -88,6 +249,7 @@ input {
     
     list-style-type: none;
     margin: 0;
+    margin-bottom: 1rem;
     
         &__clr-chip {
             
@@ -147,6 +309,7 @@ input {
     
     list-style-type: none;
     margin: 0;
+    margin-bottom: 1rem;
     
         &__size-chip {
             
@@ -179,14 +342,14 @@ input {
     
     list-style-type: none;
     margin: 0;
+    margin-bottom: 1rem;
     
         &__fit-chip {
             
             @extend .chip-style;
             position: relative;
             width: 120px;
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
+            letter-spacing: 1px;
             
             &--active {
                 border: 2px solid $primary-color;
@@ -221,10 +384,11 @@ select {
     border-radius: 4px;
     font-family: $brand-font-reg;
     font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
+    letter-spacing: 1px;
     background: url("../assets/icons/chevron-dark.svg") no-repeat;
     background-position: right 16px center;
+    transition: border ease-in-out .3s;
+    margin-bottom: 1rem;
     
     &:focus {
         outline: none;

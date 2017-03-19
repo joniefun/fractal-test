@@ -24,3 +24,16 @@ $(function() {
         $(this).addClass('fit-select__fit-chip--active');
     });
 });
+
+$(function() {
+    $('.label--radio').click( function() {
+        $(this).siblings().removeClass('label--radioactive');
+        $(this).addClass('label--radioactive');
+    });
+});
+
+$(function() {
+    $('.label--checkbox').click( function() {
+        $(this).addClass('label--checkboxactive');
+    });
+});

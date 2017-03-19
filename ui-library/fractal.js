@@ -32,3 +32,13 @@ fractal.web.set('static.path', path.join(__dirname, 'public'));
 
 /* Set preview layout */
 fractal.components.set('default.preview', '@preview');
+
+const mandelbrot = require('@frctl/mandelbrot'); // require the Mandelbrot theme module
+
+// create a new instance with custom config options
+const myCustomisedTheme = mandelbrot({
+    skin: "black"
+    // any other theme configuration values here
+});
+
+fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default

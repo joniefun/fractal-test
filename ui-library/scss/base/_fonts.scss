@@ -90,6 +90,11 @@ p {
         letter-spacing: 0.3px;
     }
     
+    &.price--title {
+        @extend h1;
+        margin-top: -0.5rem;
+    }
+    
 }
 
 /* LINK STYLES */

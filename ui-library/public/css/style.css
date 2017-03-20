@@ -33,10 +33,10 @@ body {
   src: url("../fonts/AzoSans-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/AzoSans-Medium-webfont.woff") format("woff"), url("../fonts/AzoSans-Medium-webfont.ttf") format("truetype"), url("../fonts/AzoSans-Medium-webfont.svg#azo_sansthin") format("svg"); }
 
 /* TITLE STYLES */
-h1, h2, h3 {
+h1, p.price--title, h2, h3 {
   font-weight: normal; }
 
-h1 {
+h1, p.price--title {
   font-family: "azo-sans-web-reg";
   font-size: 1.25rem;
   letter-spacing: 2.3px;
@@ -71,6 +71,8 @@ p {
   p.p--small {
     font-size: 0.6875rem;
     letter-spacing: 0.3px; }
+  p.price--title {
+    margin-top: -0.5rem; }
 
 /* LINK STYLES */
 p a {
@@ -81,10 +83,10 @@ p a {
 /* MODULES */
 /* BUTTONS */
 .btn, .btn--primary, .btn--secondary {
+  display: block;
   padding: 16px 20px;
   background-color: #1a6461;
   border-radius: 4px;
-  float: left;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -92,7 +94,7 @@ p a {
   font-family: "azo-sans-web-reg";
   font-size: 0.875rem;
   letter-spacing: 1.2px;
-  width: 100%; }
+  margin-bottom: 1.25rem; }
   .btn--secondary {
     background-color: #fff;
     color: #222;
@@ -357,6 +359,12 @@ select {
     outline: none;
     border: 1px solid #424242; }
 
+hr {
+  border: 0;
+  height: 1px;
+  background: #e6e6e6;
+  margin-bottom: 1rem; }
+
 .swiper-container__product-page--main .swiper-slide img {
   max-width: 100%; }
 
@@ -367,3 +375,32 @@ select {
   .swiper-container__product-page--main .swiper-pagination-bullet-active {
     background: #0fbb67;
     opacity: 1; }
+
+.collapsible h2 {
+  position: relative; }
+  .collapsible h2:after {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1rem;
+    background-image: url("../assets/icons/plus.svg");
+    background-repeat: no-repeat; }
+
+.collapsible__item:nth-child(2) {
+  margin-top: -17px; }
+
+.collapsible__item p {
+  display: none; }
+
+.collapsible__item--open h2:after {
+  background-image: url("../assets/icons/minus.svg"); }
+
+.collapsible:hover {
+  cursor: pointer; }
+
+.collapsible li {
+  list-style-type: none; }

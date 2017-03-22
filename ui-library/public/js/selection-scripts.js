@@ -2,8 +2,8 @@ $(function() {
     $('.clr-select li').click( function() {
         var crtclr = $(this).attr("value");
         $(".clr-val").html(crtclr);
+        $(this).not('.clr-select__clr-chip--out-of-stock').addClass('clr-select__clr-chip--active');
         $(this).siblings().removeClass('clr-select__clr-chip--active');
-        $(this).addClass('clr-select__clr-chip--active');
     });
 });
 
@@ -11,8 +11,8 @@ $(function() {
     $('.size-select li').click( function() {
         var crtsze = $(this).attr("value");
         $(".size-val").html(crtsze);
+        $(this).not('.size-select__size-chip--out-of-stock').addClass('size-select__size-chip--active');
         $(this).siblings().removeClass('size-select__size-chip--active');
-        $(this).addClass('size-select__size-chip--active');
     });
 });
 

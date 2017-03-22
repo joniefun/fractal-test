@@ -1,0 +1,33 @@
+<div class="swiper-container swiper-container__product-page--products">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="{{ path '/assets/images/products/swiper-example1.jpg' }}">
+            {{render '@listing-title'}}
+            {{render '@price-listing'}}
+        </div>
+        <div class="swiper-slide"><img src="{{ path '/assets/images/products/swiper-example1.jpg' }}">
+            {{render '@listing-title'}}
+            {{render '@price-listing'}}
+        </div>
+        <div class="swiper-slide"><img src="{{ path '/assets/images/products/swiper-example1.jpg' }}">
+            {{render '@listing-title'}}
+            {{render '@price-listing'}}
+        </div>
+        <div class="swiper-slide"><img src="{{ path '/assets/images/products/swiper-example1.jpg' }}">
+            {{render '@listing-title'}}
+            {{render '@price-listing'}}
+        </div>
+        <div class="swiper-slide"><img src="{{ path '/assets/images/products/swiper-example1.jpg' }}">
+            {{render '@listing-title'}}
+            {{render '@price-listing'}}
+        </div>
+    </div>
+</div>
+
+<script>
+    var swiperProduct = new Swiper('.swiper-container__product-page--products', {
+        pagination: '.swiper-pagination__product-page--products',
+        slidesPerView: 2.5,
+        spaceBetween: 8,
+        freeMode: true
+    });
+</script>

@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link media="all" rel="stylesheet" href="../../css/style.css">
+    <link media="all" rel="stylesheet" href="../../css/swiper.min.css">
+    <script   src="https://code.jquery.com/jquery-3.2.0.min.js"   integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="   crossorigin="anonymous"></script>
+    <script src="../../js/selection-scripts.js"></script>
+    <script src="../../js/show-hide-scripts.js"></script>
+    <script src="../../js/parsley.min.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <title>UI Library</title>
+</head>
+    <body>
+    <div class="swiper-container swiper-container__product-page--products">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    var swiperProduct = new Swiper('.swiper-container__product-page--products', {
+        pagination: '.swiper-pagination__product-page--products',
+        slidesPerView: 2.5,
+        spaceBetween: 8,
+        freeMode: true
+    });
+</script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+
+
+<div class="swiper-container swiper-container__product-page--video">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide--video"><video id="product-video" poster="../../assets/images/products/poster.jpg" src="../../assets/videos/product-vid.mp4"></video></div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg"></div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg"></div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg"></div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg"></div>
+    </div>
+    <div class="swiper-pagination swiper-pagination__product-page--video"></div>
+</div>
+
+<script>
+    var swiperProductVideo = new Swiper('.swiper-container__product-page--video', {
+        pagination: '.swiper-pagination__product-page--video',
+        paginationClickable: true,
+        initialSlide: 1,
+        runCallbacksOnInit: false,
+        onTransitionEnd: function (swiperProductVideo, event) { var video = $("#product-video")[0];
+        if (video.paused) {
+            video.play();
+        } }
+    });
+</script>

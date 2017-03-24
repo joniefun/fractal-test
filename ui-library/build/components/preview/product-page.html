@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link media="all" rel="stylesheet" href="../../css/style.css">
+    <link media="all" rel="stylesheet" href="../../css/swiper.min.css">
+    <script   src="https://code.jquery.com/jquery-3.2.0.min.js"   integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="   crossorigin="anonymous"></script>
+    <script src="../../js/selection-scripts.js"></script>
+    <script src="../../js/show-hide-scripts.js"></script>
+    <script src="../../js/parsley.min.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <title>UI Library</title>
+</head>
+    <body>
+    <div class="swiper-container swiper-container__product-page--main">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg"></div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg"></div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg"></div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg"></div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg"></div>
+    </div>
+    <div class="swiper-pagination swiper-pagination__product-page--main"></div>
+</div>
+
+<script>
+    var swiper = new Swiper('.swiper-container__product-page--main', {
+        pagination: '.swiper-pagination__product-page--main',
+        paginationClickable: true
+    });
+</script>
+
+<section class="section--padding">
+
+<h1>Main title</h1>
+<p class="price--title">£50</p>
+<hr>
+<label>Colour <span class="clr-val"></span></label>
+<ul class="clr-select">
+    <li value="black" class="clr-select__clr-chip--black"></li>
+    <li value="grey" class="clr-select__clr-chip--grey"></li>
+    <li value="blue" class="clr-select__clr-chip--blue"></li>
+    <li value="out of stock" class="clr-select__clr-chip--red clr-select__clr-chip--out-of-stock"></li>
+    <li value="out of stock" class="clr-select__clr-chip--green clr-select__clr-chip--out-of-stock"></li>
+    <li value="yellow" class="clr-select__clr-chip--yellow"></li>
+    <li value="purple" class="clr-select__clr-chip--purple"></li>
+    <li value="pink" class="clr-select__clr-chip--pink"></li>
+</ul>
+
+<label>Fit <span class="fit-val"></span></label>
+<ul class="fit-select">
+    <li value="Petite" class="fit-select__fit-chip"><span>Petite</span></li>
+    <li value="Regular" class="fit-select__fit-chip"><span>Regular</span></li>
+    <li value="Tall" class="fit-select__fit-chip"><span>Tall</span></li>
+</ul>
+<label>Size <span class="size-val"></span></label>
+<ul class="size-select">
+    <li value="6" class="size-select__size-chip"><span>6</span></li>
+    <li value="8" class="size-select__size-chip"><span>8</span></li>
+    <li value="10" class="size-select__size-chip"><span>10</span></li>
+    <li value="Out of Stock" class="size-select__size-chip size-select__size-chip--out-of-stock"><span>12</span></li>
+    <li value="14" class="size-select__size-chip"><span>14</span></li>
+    <li value="16" class="size-select__size-chip"><span>16</span></li>
+    <li value="18" class="size-select__size-chip"><span>18</span></li>
+    <li value="20" class="size-select__size-chip"><span>20</span></li>
+    <li value="22" class="size-select__size-chip"><span>22</span></li>
+</ul>
+
+<p>This is the copy style used for regular segments of information. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<a href="" class="btn--primary">Add to bag</a>
+<ul class="collapsible">
+    <li class="collapsible__item">
+        <hr>
+        <h2>Secondary title</h2>
+        <p>This is the copy style used for regular segments of information. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <hr>
+    </li>
+    <li class="collapsible__item">
+        <hr>
+        <h2>Secondary title</h2>
+        <p>This is the copy style used for regular segments of information. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <hr>
+    </li>
+</ul>
+<h2>Secondary title</h2>
+<div class="swiper-container swiper-container__product-page--products">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    var swiperProduct = new Swiper('.swiper-container__product-page--products', {
+        pagination: '.swiper-pagination__product-page--products',
+        slidesPerView: 2.5,
+        spaceBetween: 8,
+        freeMode: true
+    });
+</script>
+<h2>Secondary title</h2>
+<div class="swiper-container swiper-container__product-page--products-large">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+        <div class="swiper-slide"><img src="../../assets/images/products/swiper-example1.jpg">
+            <h3 class="h3--product-listing">Listing title</h3>
+            <p class="price--listing">£50</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    var swiperProductLarge = new Swiper('.swiper-container__product-page--products-large', {
+        pagination: '.swiper-pagination__product-page--products-large',
+        slidesPerView: 1.85,
+        spaceBetween: 8,
+        freeMode: true
+    });
+</script>
+    
+</section>
+    </body>
+</html>
